@@ -8,3 +8,4 @@ _____________
 * TestNG
 * RestAssured
 * Selenium 
+* Aquality Selenium Framework
