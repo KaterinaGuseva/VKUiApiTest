@@ -1,6 +1,7 @@
 package test;
 
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.*;
 import pojo.photo.GetUploadServerResponse;
@@ -18,13 +19,14 @@ import constants.TestConstants;
 
 public class TestVK extends BaseTest {
     
+    @Parameters({"username", "password"})
     @Test
-    public static void testWallPostVk() {
+    public static void testWallPostVk(String username, String password) {
 
         LoginPage loginPage = new LoginPage();
-        loginPage.signIn(RegistrationConfig.getLogin());
+        loginPage.signIn(username);
         PasswordPage passwordPage = new PasswordPage();
-        passwordPage.enterPassword(RegistrationConfig.getPassword());
+        passwordPage.enterPassword(password);
         SideBarBox sideBarBox = new SideBarBox();
         sideBarBox.clickSideBarButton(SideBarButtonType.SIDE_BAR_BUTTON_MY_PROFILE.getTypeParameterSideBar(), 
                 SideBarButtonType.SIDE_BAR_BUTTON_NAME.getTypeParameterSideBar());
