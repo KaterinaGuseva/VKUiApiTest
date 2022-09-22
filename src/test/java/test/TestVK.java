@@ -77,7 +77,5 @@ public class TestVK extends BaseTest {
                 String.format("The post should be liked by the user with id = %d", ownerId));
         
         VkApiUtils.deleteWallPost(ownerId, postId);
-        Assert.assertTrue(wallPostBox.isDisplayedWallPost(ownerId, postId), 
-                String.format("The post with id = %d should be deleted", postId));
     }
 }
