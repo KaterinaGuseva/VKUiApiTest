@@ -1,4 +1,4 @@
-# VKUiApiTest  
+# VkontakteUiApiTest  
 The project combines Api and UI types of site testing https://vk.com
 _____________
 
